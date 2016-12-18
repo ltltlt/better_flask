@@ -9,6 +9,7 @@
 from . import main
 from .. import db
 from . import forms
+from ..models import Permission
 # import forms      # i don't know why, but it's mistake
 import flask
 from ..models import User
@@ -36,3 +37,7 @@ def index():
 @main.route('/test/<tt>')
 def test(tt):
     return tt
+
+@main.app_context_processor
+def inject_permissions():
+    return { 'Permission':  Permission }        # let Permission can be used in template
