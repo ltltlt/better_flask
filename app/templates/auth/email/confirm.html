@@ -1,0 +1,14 @@
+<p>{{ user.username }}， 你好</p>
+<p>欢迎来到 lty 的博客!</p>
+
+<p>要验证你的邮箱，请点击 <a href="{{ url_for('auth.confirm', token=token, _external=True) }}">此链接</a></p>
+
+<p>此致</p>
+
+<p>lty</p>
+
+<b>注意：发送给此邮箱的邮件不会被处理</b>
+<b>Note: replies to this email address are not monitored.</b>
+
+<b>如果这不是你的请求，忽略便是</b>
+<b>If it's not what your request, just ignore it.</b>

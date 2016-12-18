@@ -1,0 +1,4 @@
+Dear {{ user.username }}, you can click below url to reset your email.
+{{ url_for('auth.change_email', _externel=True, token=token) }}
+
+If it's not your request, you can ignore it.
